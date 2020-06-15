@@ -13,16 +13,37 @@ public class GameplayPlayingState : IState
 
     public void Enter()
     {
-        Debug.Log("STATE: Playing Level");
+        Debug.Log("GAMEPLAY STATE: Playing");
+        _stateMachine.Input.OnMenuPress += HandleMenuPress;
+        //TODO replace this test button press with a trigger volume or condition event
+        _stateMachine.Input.OnSpecial01Press += HandleSpecial01Press;
+        _stateMachine.Input.OnSpecial02Press += HandleSpecial02Press;
     }
 
     public void Exit()
     {
-        
+        _stateMachine.Input.OnMenuPress -= HandleMenuPress;
+        _stateMachine.Input.OnSpecial01Press -= HandleSpecial01Press;
+        _stateMachine.Input.OnSpecial02Press -= HandleSpecial02Press;
     }
 
     public void Tick()
     {
         
+    }
+
+    void HandleMenuPress()
+    {
+        _stateMachine.ChangeState(_stateMachine.GameplayPauseMenuState);
+    }
+
+    void HandleSpecial01Press()
+    {
+        _stateMachine.ChangeState(_stateMachine.GameplayWinState);
+    }
+
+    void HandleSpecial02Press()
+    {
+        _stateMachine.ChangeState(_stateMachine.GameplayLoseState);
     }
 }

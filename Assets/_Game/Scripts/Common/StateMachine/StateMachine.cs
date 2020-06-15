@@ -41,8 +41,7 @@ public abstract class StateMachine : MonoBehaviour
 		if(CurrentState != null)
 			CurrentState.Exit();
 		// save our current state, in case we want to return to it
-		if (_previousState != null)
-			_previousState = CurrentState;
+		_previousState = CurrentState;
 
 		CurrentState = newState;
 

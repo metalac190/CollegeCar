@@ -2,27 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameplayPauseState : IState
+public class GameplayExitState : IState
 {
     GameplaySM _stateMachine = null;
 
-    public GameplayPauseState(GameplaySM stateMachine)
+    public GameplayExitState(GameplaySM stateMachine)
     {
         _stateMachine = stateMachine;
     }
 
     public void Enter()
     {
-        Debug.Log("STATE: Paused");
+        Debug.Log("GAMEPLAY STATE: Exit");
     }
 
     public void Exit()
     {
-        Debug.Log("STATE: Unpaused");
+        
     }
 
     public void Tick()
     {
-        
+        //TODO load a different level here
     }
 }
