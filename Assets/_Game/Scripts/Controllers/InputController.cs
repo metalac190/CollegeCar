@@ -12,6 +12,7 @@ public class InputController : MonoBehaviour
     public event Action OnRightPress = delegate { };
 
     public event Action OnConfirmPress = delegate { };  // Space by default
+    public event Action OnCancelPress = delegate { };   // Backspace by default
     public event Action OnMenuPress = delegate { };     // Escape by default
     public event Action OnSpecial01Press = delegate { };  // O by default
     public event Action OnSpecial02Press = delegate { };    // P by default
@@ -35,11 +36,16 @@ public class InputController : MonoBehaviour
         {
             OnDownPress.Invoke();
         }
-        // Actions
+        // Confirm/Cancel Actions
         if (Input.GetKeyDown(KeyCode.Space))
         {
             OnConfirmPress.Invoke();
         }
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            OnCancelPress.Invoke();
+        }
+        // Ability Actions
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             OnMenuPress.Invoke();
