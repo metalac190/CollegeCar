@@ -655,6 +655,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 459777159144565288}
+  - component: {fileID: 1770476430}
   m_Layer: 0
   m_Name: MainMenuSettingsUI
   m_TagString: Untagged
@@ -677,6 +678,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1770476430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459777159144565289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b66f5f9eee30397489eaa14a971dcef6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &459777159537376759
 GameObject:
   m_ObjectHideFlags: 0
@@ -919,13 +932,14 @@ GameObject:
   - component: {fileID: 459777159564355549}
   - component: {fileID: 459777159564355538}
   - component: {fileID: 459777159564355536}
+  - component: {fileID: 1888149110}
   m_Layer: 0
   m_Name: MainMenuSettings_cnv
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &459777159564355537
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1018,3 +1032,15 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1888149110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459777159564355542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7600c13646d0bea45bd7df5ddacb6779, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

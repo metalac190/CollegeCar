@@ -4,14 +4,20 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 
-public class MainMenuRootUI : MonoBehaviour
+/// <summary>
+/// This class is responsible for controlling the UI Menu States and events
+/// related to the MainMenuRoot state.
+/// </summary>
+public class MainMenuRootUIController : UIController
 {
     // button events
     public event Action OnStartGameClick = delegate { };
     public event Action OnSettingsClick = delegate { };
     public event Action OnQuitClick = delegate { };
-    [Header("Views")]
-    [SerializeField] MainMenuRootView _rootView = null;
+
+    [Header("View")]
+    [SerializeField] MainMenuRootView _rootView = null; // offloading display functions to a 'View' script for this UI
+
     [Header("Buttons")]
     [SerializeField] Button _startGameButton = null;
     [SerializeField] Button _settingsButton = null;
@@ -19,6 +25,9 @@ public class MainMenuRootUI : MonoBehaviour
 
     private void OnEnable()
     {
+        // menu events
+        _rootView.OnMenuHidden += HandleMenuHidden;
+        // button click events
         _startGameButton.onClick.AddListener(HandleStartGameButtonPress);
         _settingsButton.onClick.AddListener(HandleSettingsButtonPress);
         _quitButton.onClick.AddListener(HandleQuitButtonPress);
@@ -26,35 +35,36 @@ public class MainMenuRootUI : MonoBehaviour
 
     private void OnDisable()
     {
+        // menu events
+        _rootView.OnMenuHidden -= HandleMenuHidden;
+        // button click events
         _startGameButton.onClick.RemoveListener(HandleStartGameButtonPress);
         _settingsButton.onClick.RemoveListener(HandleSettingsButtonPress);
         _quitButton.onClick.RemoveListener(HandleQuitButtonPress);
     }
 
-    private void Awake()
+    public override void ShowCanvas()
     {
-        // default it to disabled
-        _rootView.gameObject.SetActive(false);
-    }
-
-    public void Show()
-    {
-        //TODO animate in
         _rootView.gameObject.SetActive(true);
         _rootView.Show();
     }
 
-    public void UpdateDisplay()
+    public override void HideCanvas()
     {
-        // can update data here if necessary
-    }
-
-    public void Hide()
-    {
-        //TODO animate out
         _rootView.Hide();
     }
 
+    public void UpdateDisplay()
+    {
+        // Example: can update data here if necessary
+    }
+
+    #region Callbacks
+    void HandleMenuHidden()
+    {
+        _rootView.gameObject.SetActive(false);
+    }
+    // example for how to do button events
     void HandleStartGameButtonPress()
     {
         OnStartGameClick?.Invoke();
@@ -69,4 +79,7 @@ public class MainMenuRootUI : MonoBehaviour
     {
         OnQuitClick?.Invoke();
     }
+
+
+    #endregion
 }

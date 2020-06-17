@@ -6,9 +6,9 @@ public class MainMenuRootState : State
 {
     MainMenuSM _stateMachine = null;
     InputController _input = null;
-    MainMenuRootUI _menuController = null;
+    MainMenuRootUIController _menuController = null;
 
-    public MainMenuRootState(MainMenuSM stateMachine, InputController input, MainMenuRootUI menuController)
+    public MainMenuRootState(MainMenuSM stateMachine, InputController input, MainMenuRootUIController menuController)
     {
         _stateMachine = stateMachine;
         _input = input;
@@ -27,7 +27,7 @@ public class MainMenuRootState : State
         _menuController.OnSettingsClick += HandleSettingsClick;
         _menuController.OnQuitClick += HandleQuitClick;
 
-        _menuController.Show();
+        _menuController.ShowCanvas();
     }
 
     public override void Exit()
@@ -41,7 +41,7 @@ public class MainMenuRootState : State
         _menuController.OnSettingsClick -= HandleSettingsClick;
         _menuController.OnQuitClick -= HandleQuitClick;
 
-        _menuController.Hide();
+        _menuController.HideCanvas();
     }
 
     public override void Tick()

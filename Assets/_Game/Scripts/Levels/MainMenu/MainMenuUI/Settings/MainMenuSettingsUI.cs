@@ -2,16 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MainMenuSettingsUI : MonoBehaviour
+public class MainMenuSettingsUI : UIController
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void HideCanvas()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void ShowCanvas()
     {
         
     }
