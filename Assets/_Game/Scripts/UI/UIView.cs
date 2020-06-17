@@ -5,28 +5,54 @@ using System;
 
 public abstract class UIView : MonoBehaviour
 {
-    public event Action OnMenuHidden;
-
     [Header("Base Settings")]
-    [SerializeField] PanelAnimationSimple _menuAnimation = null;
+    [SerializeField] Canvas _menuCanvas = null;
+    protected Canvas MenuCanvas => _menuCanvas;
+
+    [SerializeField] MenuAnimation _menuAnimation = null;
 
     private void OnEnable()
     {
-        _menuAnimation?.OnHideAnimationComplete.AddListener(OnMenuHidden.Invoke);
+        if(_menuAnimation != null)
+        {
+            _menuAnimation.OnHideComplete += HandleHideComplete;
+        }
     }
 
     private void OnDisable()
     {
-        _menuAnimation?.OnHideAnimationComplete.RemoveListener(OnMenuHidden.Invoke);
+        if(_menuAnimation != null)
+        {
+            _menuAnimation.OnHideComplete -= HandleHideComplete;
+        }
     }
 
     public virtual void Show()
     {
-        _menuAnimation?.AnimateShow();
+        // make sure the Canvas is enabled
+        _menuCanvas.gameObject.SetActive(true);
+
+        if(_menuAnimation != null)
+        {
+            _menuAnimation.AnimateShow();
+        }
     }
 
     public virtual void Hide()
     {
-        _menuAnimation?.AnimateHide();
+        // if there's no hide animation, just disable it
+        if(_menuAnimation != null)
+        {
+            _menuAnimation.AnimateHide();
+        }
+        else
+        {
+            _menuCanvas.gameObject.SetActive(false);
+        }
+    }
+
+    void HandleHideComplete()
+    {
+        _menuCanvas.gameObject.SetActive(false);
     }
 }

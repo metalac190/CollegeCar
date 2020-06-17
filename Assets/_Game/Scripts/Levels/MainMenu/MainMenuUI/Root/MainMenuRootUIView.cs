@@ -9,7 +9,7 @@ using System;
 /// handled here as well. This is mainly to prevent everything going inside of a
 /// single UIController class
 /// </summary>
-public class MainMenuRootView : UIView
+public class MainMenuRootUIView : UIView
 {
-
+    
 }

@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
+using System;
 
 public abstract class MenuAnimation : MonoBehaviour
 {
+    public abstract event Action OnShowComplete;
+    public abstract event Action OnHideComplete;
+
     public abstract void AnimateShow();
     public abstract void AnimateHide();
 }

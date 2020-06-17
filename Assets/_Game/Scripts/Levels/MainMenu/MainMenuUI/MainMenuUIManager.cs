@@ -7,7 +7,7 @@ public class MainMenuUIManager : MonoBehaviour
     [SerializeField] MainMenuRootUIController _mainMenuRootUI = null;
     public MainMenuRootUIController MainMenuRootUI => _mainMenuRootUI;
 
-    [SerializeField] MainMenuSettingsUI _mainMenuSettingsUI = null;
-    public MainMenuSettingsUI MainMenuSettingsUI => _mainMenuSettingsUI;
+    [SerializeField] MainMenuSettingsUIController _mainMenuSettingsUI = null;
+    public MainMenuSettingsUIController MainMenuSettingsUI => _mainMenuSettingsUI;
     
 }

@@ -15,7 +15,7 @@ public class MainMenuSM : StateMachine
     private void Awake()
     {
         RootState = new MainMenuRootState(this, _input, _uIManager.MainMenuRootUI);
-        SettingsState = new MainMenuSettingsState(this, _input);
+        SettingsState = new MainMenuSettingsState(this, _input, _uIManager.MainMenuSettingsUI);
         QuitState = new MainMenuQuitState(this);
         StartGameState = new MainMenuStartGameState(this);
     }

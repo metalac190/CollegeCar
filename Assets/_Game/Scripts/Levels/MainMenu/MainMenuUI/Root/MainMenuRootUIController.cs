@@ -8,6 +8,8 @@ using System;
 /// This class is responsible for controlling the UI Menu States and events
 /// related to the MainMenuRoot state.
 /// </summary>
+
+[RequireComponent(typeof(MainMenuRootUIView))]
 public class MainMenuRootUIController : UIController
 {
     // button events
@@ -15,18 +17,22 @@ public class MainMenuRootUIController : UIController
     public event Action OnSettingsClick = delegate { };
     public event Action OnQuitClick = delegate { };
 
-    [Header("View")]
-    [SerializeField] MainMenuRootView _rootView = null; // offloading display functions to a 'View' script for this UI
-
-    [Header("Buttons")]
+    [Header("Root Controller")]
     [SerializeField] Button _startGameButton = null;
     [SerializeField] Button _settingsButton = null;
     [SerializeField] Button _quitButton = null;
 
+    MainMenuRootUIView _view = null; // offloading display functions to a 'View' script for this UI
+
+    private void Awake()
+    {
+        _view = GetComponent<MainMenuRootUIView>();
+    }
+
     private void OnEnable()
     {
         // menu events
-        _rootView.OnMenuHidden += HandleMenuHidden;
+        //_view.OnMenuHidden += HandleMenuHidden;
         // button click events
         _startGameButton.onClick.AddListener(HandleStartGameButtonPress);
         _settingsButton.onClick.AddListener(HandleSettingsButtonPress);
@@ -36,7 +42,7 @@ public class MainMenuRootUIController : UIController
     private void OnDisable()
     {
         // menu events
-        _rootView.OnMenuHidden -= HandleMenuHidden;
+        //_view.OnMenuHidden -= HandleMenuHidden;
         // button click events
         _startGameButton.onClick.RemoveListener(HandleStartGameButtonPress);
         _settingsButton.onClick.RemoveListener(HandleSettingsButtonPress);
@@ -45,13 +51,12 @@ public class MainMenuRootUIController : UIController
 
     public override void ShowCanvas()
     {
-        _rootView.gameObject.SetActive(true);
-        _rootView.Show();
+        _view.Show();
     }
 
     public override void HideCanvas()
     {
-        _rootView.Hide();
+        _view.Hide();
     }
 
     public void UpdateDisplay()
@@ -60,10 +65,6 @@ public class MainMenuRootUIController : UIController
     }
 
     #region Callbacks
-    void HandleMenuHidden()
-    {
-        _rootView.gameObject.SetActive(false);
-    }
     // example for how to do button events
     void HandleStartGameButtonPress()
     {

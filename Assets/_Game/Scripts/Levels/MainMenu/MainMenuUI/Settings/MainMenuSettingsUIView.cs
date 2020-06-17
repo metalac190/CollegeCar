@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class MainMenuSettingsView : UIView
+public class MainMenuSettingsUIView : UIView
 {
 
 }
