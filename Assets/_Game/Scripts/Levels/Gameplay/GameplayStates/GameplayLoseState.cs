@@ -15,12 +15,12 @@ public class GameplayLoseState : State
     public override void Enter()
     {
         Debug.Log("GAMEPLAY STATE: Lose");
-        _stateMachine.Input.OnConfirmPress += HandleConfirmPress;
+        //_stateMachine.Input.OnConfirmPress += HandleConfirmPress;
     }
 
     public override void Exit()
     {
-        _stateMachine.Input.OnConfirmPress -= HandleConfirmPress;
+        //_stateMachine.Input.OnConfirmPress -= HandleConfirmPress;
     }
 
     public override void Tick()

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MainMenuSM : StateMachine
 {
-    [SerializeField] InputController _input = null;
+    [SerializeField] PlayerInputHandler _input = null;
     [SerializeField] MainMenuUIManager _uIManager = null;
 
     public MainMenuRootState RootState { get; private set; }

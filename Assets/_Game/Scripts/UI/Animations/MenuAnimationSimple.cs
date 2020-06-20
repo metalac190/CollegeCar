@@ -48,7 +48,6 @@ public class MenuAnimationSimple : MenuAnimation
 
     public override void AnimateHide()
     {
-        Debug.Log("Animate Hide");
         // initialize animation out state
         _panelTransform.localScale = _initialScale;
         _panelCanvasGroup.alpha = 1;
@@ -59,13 +58,11 @@ public class MenuAnimationSimple : MenuAnimation
 
     void HandleShowComplete()
     {
-        Debug.Log("Show Complete");
         OnShowComplete?.Invoke();
     }
 
     void HandleHideComplete()
     {
-        Debug.Log("Hide Complete");
         OnHideComplete?.Invoke();
     }
 }

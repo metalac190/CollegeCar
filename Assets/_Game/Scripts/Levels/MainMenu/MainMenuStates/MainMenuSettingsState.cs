@@ -5,10 +5,10 @@ using UnityEngine;
 public class MainMenuSettingsState : State
 {
     MainMenuSM _stateMachine = null;
-    InputController _input = null;
+    PlayerInputHandler _input = null;
     MainMenuSettingsUIController _uiController = null;
 
-    public MainMenuSettingsState(MainMenuSM stateMachine, InputController input, 
+    public MainMenuSettingsState(MainMenuSM stateMachine, PlayerInputHandler input, 
         MainMenuSettingsUIController uiController)
     {
         _stateMachine = stateMachine;

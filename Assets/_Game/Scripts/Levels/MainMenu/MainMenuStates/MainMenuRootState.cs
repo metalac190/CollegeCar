@@ -5,10 +5,10 @@ using UnityEngine;
 public class MainMenuRootState : State
 {
     MainMenuSM _stateMachine = null;
-    InputController _input = null;
+    PlayerInputHandler _input = null;
     MainMenuRootUIController _menuController = null;
 
-    public MainMenuRootState(MainMenuSM stateMachine, InputController input, MainMenuRootUIController menuController)
+    public MainMenuRootState(MainMenuSM stateMachine, PlayerInputHandler input, MainMenuRootUIController menuController)
     {
         _stateMachine = stateMachine;
         _input = input;
@@ -19,9 +19,9 @@ public class MainMenuRootState : State
     {
         Debug.Log("MAIN MENU STATE: Root");
         // input events
-        _input.OnUpPress += HandleUpPress;
-        _input.OnDownPress += HandleDownPress;
-        _input.OnConfirmPress += HandleConfirmPress;
+        //_input.OnUpPress += HandleUpPress;
+        //_input.OnDownPress += HandleDownPress;
+        //_input.OnConfirmPress += HandleConfirmPress;
         // button click events
         _menuController.OnStartGameClick += HandleStartGameClick;
         _menuController.OnSettingsClick += HandleSettingsClick;
@@ -33,9 +33,9 @@ public class MainMenuRootState : State
     public override void Exit()
     {
         // input events
-        _input.OnUpPress -= HandleUpPress;
-        _input.OnDownPress -= HandleDownPress;
-        _input.OnConfirmPress -= HandleConfirmPress;
+        //_input.OnUpPress -= HandleUpPress;
+        //_input.OnDownPress -= HandleDownPress;
+        //_input.OnConfirmPress -= HandleConfirmPress;
         // button click events
         _menuController.OnStartGameClick -= HandleStartGameClick;
         _menuController.OnSettingsClick -= HandleSettingsClick;

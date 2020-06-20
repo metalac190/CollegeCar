@@ -14,12 +14,12 @@ public class GameplayPauseMenuState : State
     public override void Enter()
     {
         Debug.Log("GAMEPLAY STATE: Paused");
-        _stateMachine.Input.OnMenuPress += HandleMenuPress;
+        //_stateMachine.Input.OnMenuPress += HandleMenuPress;
     }
 
     public override void Exit()
     {
-        _stateMachine.Input.OnMenuPress -= HandleMenuPress;
+        //_stateMachine.Input.OnMenuPress -= HandleMenuPress;
     }
 
     public override void Tick()

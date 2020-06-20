@@ -16,14 +16,14 @@ public class GameplayIntroState : State
     {
         Debug.Log("GAMEPLAY STATE: Intro");
         //TODO play intro cutscene
-        _stateMachine.Input.OnMenuPress += HandleMenuPressed;
-        _stateMachine.Input.OnConfirmPress += HandleConfirmPressed;
+        //_stateMachine.Input.OnMenuPress += HandleMenuPressed;
+        //_stateMachine.Input.OnConfirmPress += HandleConfirmPressed;
     }
 
     public override void Exit()
     {
-        _stateMachine.Input.OnMenuPress -= HandleMenuPressed;
-        _stateMachine.Input.OnConfirmPress -= HandleConfirmPressed;
+        //_stateMachine.Input.OnMenuPress -= HandleMenuPressed;
+        //_stateMachine.Input.OnConfirmPress -= HandleConfirmPressed;
     }
 
     public override void Tick()

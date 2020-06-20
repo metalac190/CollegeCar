@@ -14,17 +14,17 @@ public class GameplayPlayingState : State
     public override void Enter()
     {
         Debug.Log("GAMEPLAY STATE: Playing");
-        _stateMachine.Input.OnMenuPress += HandleMenuPress;
+        //_stateMachine.Input.OnMenuPress += HandleMenuPress;
         //TODO replace this test button press with a trigger volume or condition event
-        _stateMachine.Input.OnSpecial01Press += HandleSpecial01Press;
-        _stateMachine.Input.OnSpecial02Press += HandleSpecial02Press;
+        //_stateMachine.Input.OnSpecial01Press += HandleSpecial01Press;
+        //_stateMachine.Input.OnSpecial02Press += HandleSpecial02Press;
     }
 
     public override void Exit()
     {
-        _stateMachine.Input.OnMenuPress -= HandleMenuPress;
-        _stateMachine.Input.OnSpecial01Press -= HandleSpecial01Press;
-        _stateMachine.Input.OnSpecial02Press -= HandleSpecial02Press;
+        //_stateMachine.Input.OnMenuPress -= HandleMenuPress;
+        //_stateMachine.Input.OnSpecial01Press -= HandleSpecial01Press;
+        //_stateMachine.Input.OnSpecial02Press -= HandleSpecial02Press;
     }
 
     public override void Tick()

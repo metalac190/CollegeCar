@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class GameplaySM : StateMachine
 {
-    [SerializeField] InputController _input = null;
-    public InputController Input => _input;
+    [SerializeField] PlayerInputHandler _input = null;
+    public PlayerInputHandler Input => _input;
     // states
     public GameplayIntroState GameplayIntroState { get; private set; }
     public GameplayPauseMenuState GameplayPauseMenuState { get; private set; }
