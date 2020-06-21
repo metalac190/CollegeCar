@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MainMenuSM : StateMachine
 {
-    [SerializeField] PlayerInputHandler _input = null;
+    [SerializeField] InputManager _input = null;
     [SerializeField] MainMenuUIManager _uIManager = null;
 
     public MainMenuRootState RootState { get; private set; }
@@ -14,8 +15,8 @@ public class MainMenuSM : StateMachine
 
     private void Awake()
     {
-        RootState = new MainMenuRootState(this, _input, _uIManager.MainMenuRootUI);
-        SettingsState = new MainMenuSettingsState(this, _input, _uIManager.MainMenuSettingsUI);
+        RootState = new MainMenuRootState(this, _input.Controls, _uIManager.MainMenuRootUI);
+        SettingsState = new MainMenuSettingsState(this, _input.Controls, _uIManager.MainMenuSettingsUI);
         QuitState = new MainMenuQuitState(this);
         StartGameState = new MainMenuStartGameState(this);
     }

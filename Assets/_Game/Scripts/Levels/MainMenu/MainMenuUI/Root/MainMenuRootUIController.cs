@@ -68,6 +68,7 @@ public class MainMenuRootUIController : UIController
     // example for how to do button events
     void HandleStartGameButtonPress()
     {
+        Debug.Log("Start Game!");
         OnStartGameClick?.Invoke();
     }
 
@@ -80,7 +81,5 @@ public class MainMenuRootUIController : UIController
     {
         OnQuitClick?.Invoke();
     }
-
-
     #endregion
 }

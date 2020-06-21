@@ -1,14 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MainMenuRootState : State
 {
     MainMenuSM _stateMachine = null;
-    PlayerInputHandler _input = null;
+    PlayerControls _input = null;
     MainMenuRootUIController _menuController = null;
 
-    public MainMenuRootState(MainMenuSM stateMachine, PlayerInputHandler input, MainMenuRootUIController menuController)
+    public MainMenuRootState(MainMenuSM stateMachine, PlayerControls input, MainMenuRootUIController menuController)
     {
         _stateMachine = stateMachine;
         _input = input;
@@ -19,9 +20,9 @@ public class MainMenuRootState : State
     {
         Debug.Log("MAIN MENU STATE: Root");
         // input events
-        //_input.OnUpPress += HandleUpPress;
-        //_input.OnDownPress += HandleDownPress;
-        //_input.OnConfirmPress += HandleConfirmPress;
+        _input.Menu.Up.performed += ctx => HandleUpPerformed();
+        _input.Menu.Down.performed += ctx => HandleDownPerformed();
+        _input.Menu.Confirm.performed += ctx => HandleConfirmPress();
         // button click events
         _menuController.OnStartGameClick += HandleStartGameClick;
         _menuController.OnSettingsClick += HandleSettingsClick;
@@ -33,9 +34,9 @@ public class MainMenuRootState : State
     public override void Exit()
     {
         // input events
-        //_input.OnUpPress -= HandleUpPress;
-        //_input.OnDownPress -= HandleDownPress;
-        //_input.OnConfirmPress -= HandleConfirmPress;
+        _input.Menu.Up.performed -= ctx => HandleUpPerformed();
+        _input.Menu.Down.performed -= ctx => HandleDownPerformed();
+        _input.Menu.Confirm.performed -= ctx => HandleConfirmPress();
         // button click events
         _menuController.OnStartGameClick -= HandleStartGameClick;
         _menuController.OnSettingsClick -= HandleSettingsClick;
@@ -49,19 +50,19 @@ public class MainMenuRootState : State
         
     }
 
-    void HandleUpPress()
+    void HandleUpPerformed()
     {
-        //TODO cycle button selection up
+        Debug.Log("Pressed UP");
     }
 
-    void HandleDownPress()
+    void HandleDownPerformed()
     {
-        //TODO cycle button selection down
+        Debug.Log("Pressed DOWN");
     }
 
     void HandleConfirmPress()
     {
-        //TODO confirm Selection
+        Debug.Log("Pressed CONFIRM");
     }
 
     void HandleStartGameClick()

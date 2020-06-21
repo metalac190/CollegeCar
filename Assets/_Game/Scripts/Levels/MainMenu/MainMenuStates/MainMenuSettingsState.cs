@@ -1,18 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MainMenuSettingsState : State
 {
     MainMenuSM _stateMachine = null;
-    PlayerInputHandler _input = null;
+    PlayerControls _input = null;
     MainMenuSettingsUIController _uiController = null;
 
-    public MainMenuSettingsState(MainMenuSM stateMachine, PlayerInputHandler input, 
-        MainMenuSettingsUIController uiController)
+    public MainMenuSettingsState(MainMenuSM stateMachine, PlayerControls input, MainMenuSettingsUIController uiController)
     {
         _stateMachine = stateMachine;
-        _input = input;
+        //_input = input;
         _uiController = uiController;
     }
 
