@@ -2,11 +2,11 @@
     "name": "PlayerControls",
     "maps": [
         {
-            "name": "Vehicle",
+            "name": "Game",
             "id": "70bc02e1-8d1b-4ec7-89a7-0c63335e1dc0",
             "actions": [
                 {
-                    "name": "PrimaryAbility",
+                    "name": "Button01",
                     "type": "Button",
                     "id": "7964ea3d-2d85-439f-a0f3-2ca98d135030",
                     "expectedControlType": "Button",
@@ -14,9 +14,25 @@
                     "interactions": ""
                 },
                 {
-                    "name": "SecondaryAbility",
+                    "name": "Button02",
                     "type": "Button",
                     "id": "f429516b-d604-4acc-9093-d183e86dd9a5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Button03",
+                    "type": "Button",
+                    "id": "5df945a7-a0a0-4452-b92d-7cad8a4cb9b2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Button04",
+                    "type": "Button",
+                    "id": "ed118158-c206-4b84-908e-2d60a286eee3",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -36,6 +52,54 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Start",
+                    "type": "Button",
+                    "id": "bebfeead-1ff8-46f0-91b8-e2ca2c8194a6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Select",
+                    "type": "Button",
+                    "id": "667cfd2f-ca0d-477f-ac02-5182e997f331",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Special01",
+                    "type": "Button",
+                    "id": "86aa7274-e7b0-4ed0-8fcf-b513851e6a3e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Specia0l2",
+                    "type": "Button",
+                    "id": "8a5d4118-9301-4cc7-a421-a6fbdd658a94",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Special03",
+                    "type": "Button",
+                    "id": "63317391-cbdb-479a-8ef4-993e208e0480",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Special04",
+                    "type": "Button",
+                    "id": "c40482fa-a89a-406a-9ce1-d326a3b5f85d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -46,7 +110,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "MouseAndKeyboard",
-                    "action": "PrimaryAbility",
+                    "action": "Button01",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -57,7 +121,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "MouseAndKeyboard",
-                    "action": "SecondaryAbility",
+                    "action": "Button02",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -190,6 +254,94 @@
                     "processors": "",
                     "groups": "Controller",
                     "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1f5c5547-5e6e-413c-8130-c66b39cc7bb1",
+                    "path": "<Keyboard>/leftShift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MouseAndKeyboard",
+                    "action": "Button03",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "906808e3-77bc-43c5-8a5d-11f719b7c421",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MouseAndKeyboard",
+                    "action": "Button04",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "83051e4d-4a57-435f-9a0b-861a3f3f5a83",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MouseAndKeyboard;Controller",
+                    "action": "Start",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d59c3ed6-54e8-432d-a4b0-4036944012f6",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MouseAndKeyboard",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0a60b041-ed72-4bf9-b22a-bef2f6140cb7",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MouseAndKeyboard",
+                    "action": "Special01",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5a06accc-727f-45f8-9f4f-72a1c0e4d1ec",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MouseAndKeyboard",
+                    "action": "Specia0l2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5d2b5027-eba7-41ac-9c5c-417d625885de",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MouseAndKeyboard",
+                    "action": "Special03",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5b55d265-ce9c-427b-b496-2a6a83ce293d",
+                    "path": "<Keyboard>/4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MouseAndKeyboard",
+                    "action": "Special04",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class GameplaySM : StateMachine
 {
-    //[SerializeField] PlayerInputHandler _input = null;
-    //public PlayerInputHandler Input => _input;
+    [SerializeField] InputManager _input = null;
     // states
     public GameplayIntroState GameplayIntroState { get; private set; }
     public GameplayPauseMenuState GameplayPauseMenuState { get; private set; }
@@ -17,7 +16,7 @@ public class GameplaySM : StateMachine
     private void Awake()
     {
         // create all the states
-        GameplayIntroState = new GameplayIntroState(this);
+        GameplayIntroState = new GameplayIntroState(this, _input);
         GameplayPauseMenuState = new GameplayPauseMenuState(this);
         GameplayPlayingState = new GameplayPlayingState(this);
         GameplayWinState = new GameplayWinState(this);

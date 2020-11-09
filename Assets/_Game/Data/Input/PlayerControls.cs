@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/PlayerControls.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/_Game/Data/Input/PlayerControls.inputactions'
 
 using System;
 using System.Collections;
@@ -15,11 +15,11 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     ""name"": ""PlayerControls"",
     ""maps"": [
         {
-            ""name"": ""Vehicle"",
+            ""name"": ""Game"",
             ""id"": ""70bc02e1-8d1b-4ec7-89a7-0c63335e1dc0"",
             ""actions"": [
                 {
-                    ""name"": ""PrimaryAbility"",
+                    ""name"": ""Button01"",
                     ""type"": ""Button"",
                     ""id"": ""7964ea3d-2d85-439f-a0f3-2ca98d135030"",
                     ""expectedControlType"": ""Button"",
@@ -27,9 +27,25 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""SecondaryAbility"",
+                    ""name"": ""Button02"",
                     ""type"": ""Button"",
                     ""id"": ""f429516b-d604-4acc-9093-d183e86dd9a5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Button03"",
+                    ""type"": ""Button"",
+                    ""id"": ""5df945a7-a0a0-4452-b92d-7cad8a4cb9b2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Button04"",
+                    ""type"": ""Button"",
+                    ""id"": ""ed118158-c206-4b84-908e-2d60a286eee3"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -49,6 +65,54 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Start"",
+                    ""type"": ""Button"",
+                    ""id"": ""bebfeead-1ff8-46f0-91b8-e2ca2c8194a6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Select"",
+                    ""type"": ""Button"",
+                    ""id"": ""667cfd2f-ca0d-477f-ac02-5182e997f331"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Special01"",
+                    ""type"": ""Button"",
+                    ""id"": ""86aa7274-e7b0-4ed0-8fcf-b513851e6a3e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Specia0l2"",
+                    ""type"": ""Button"",
+                    ""id"": ""8a5d4118-9301-4cc7-a421-a6fbdd658a94"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Special03"",
+                    ""type"": ""Button"",
+                    ""id"": ""63317391-cbdb-479a-8ef4-993e208e0480"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Special04"",
+                    ""type"": ""Button"",
+                    ""id"": ""c40482fa-a89a-406a-9ce1-d326a3b5f85d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -59,7 +123,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""MouseAndKeyboard"",
-                    ""action"": ""PrimaryAbility"",
+                    ""action"": ""Button01"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -70,7 +134,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""MouseAndKeyboard"",
-                    ""action"": ""SecondaryAbility"",
+                    ""action"": ""Button02"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -203,6 +267,94 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Controller"",
                     ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1f5c5547-5e6e-413c-8130-c66b39cc7bb1"",
+                    ""path"": ""<Keyboard>/leftShift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MouseAndKeyboard"",
+                    ""action"": ""Button03"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""906808e3-77bc-43c5-8a5d-11f719b7c421"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MouseAndKeyboard"",
+                    ""action"": ""Button04"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""83051e4d-4a57-435f-9a0b-861a3f3f5a83"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MouseAndKeyboard;Controller"",
+                    ""action"": ""Start"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d59c3ed6-54e8-432d-a4b0-4036944012f6"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MouseAndKeyboard"",
+                    ""action"": ""Select"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0a60b041-ed72-4bf9-b22a-bef2f6140cb7"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MouseAndKeyboard"",
+                    ""action"": ""Special01"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5a06accc-727f-45f8-9f4f-72a1c0e4d1ec"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MouseAndKeyboard"",
+                    ""action"": ""Specia0l2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5d2b5027-eba7-41ac-9c5c-417d625885de"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MouseAndKeyboard"",
+                    ""action"": ""Special03"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5b55d265-ce9c-427b-b496-2a6a83ce293d"",
+                    ""path"": ""<Keyboard>/4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MouseAndKeyboard"",
+                    ""action"": ""Special04"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -438,12 +590,20 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         }
     ]
 }");
-        // Vehicle
-        m_Vehicle = asset.FindActionMap("Vehicle", throwIfNotFound: true);
-        m_Vehicle_PrimaryAbility = m_Vehicle.FindAction("PrimaryAbility", throwIfNotFound: true);
-        m_Vehicle_SecondaryAbility = m_Vehicle.FindAction("SecondaryAbility", throwIfNotFound: true);
-        m_Vehicle_Move = m_Vehicle.FindAction("Move", throwIfNotFound: true);
-        m_Vehicle_Look = m_Vehicle.FindAction("Look", throwIfNotFound: true);
+        // Game
+        m_Game = asset.FindActionMap("Game", throwIfNotFound: true);
+        m_Game_Button01 = m_Game.FindAction("Button01", throwIfNotFound: true);
+        m_Game_Button02 = m_Game.FindAction("Button02", throwIfNotFound: true);
+        m_Game_Button03 = m_Game.FindAction("Button03", throwIfNotFound: true);
+        m_Game_Button04 = m_Game.FindAction("Button04", throwIfNotFound: true);
+        m_Game_Move = m_Game.FindAction("Move", throwIfNotFound: true);
+        m_Game_Look = m_Game.FindAction("Look", throwIfNotFound: true);
+        m_Game_Start = m_Game.FindAction("Start", throwIfNotFound: true);
+        m_Game_Select = m_Game.FindAction("Select", throwIfNotFound: true);
+        m_Game_Special01 = m_Game.FindAction("Special01", throwIfNotFound: true);
+        m_Game_Specia0l2 = m_Game.FindAction("Specia0l2", throwIfNotFound: true);
+        m_Game_Special03 = m_Game.FindAction("Special03", throwIfNotFound: true);
+        m_Game_Special04 = m_Game.FindAction("Special04", throwIfNotFound: true);
         // Menu
         m_Menu = asset.FindActionMap("Menu", throwIfNotFound: true);
         m_Menu_Up = m_Menu.FindAction("Up", throwIfNotFound: true);
@@ -498,62 +658,126 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         asset.Disable();
     }
 
-    // Vehicle
-    private readonly InputActionMap m_Vehicle;
-    private IVehicleActions m_VehicleActionsCallbackInterface;
-    private readonly InputAction m_Vehicle_PrimaryAbility;
-    private readonly InputAction m_Vehicle_SecondaryAbility;
-    private readonly InputAction m_Vehicle_Move;
-    private readonly InputAction m_Vehicle_Look;
-    public struct VehicleActions
+    // Game
+    private readonly InputActionMap m_Game;
+    private IGameActions m_GameActionsCallbackInterface;
+    private readonly InputAction m_Game_Button01;
+    private readonly InputAction m_Game_Button02;
+    private readonly InputAction m_Game_Button03;
+    private readonly InputAction m_Game_Button04;
+    private readonly InputAction m_Game_Move;
+    private readonly InputAction m_Game_Look;
+    private readonly InputAction m_Game_Start;
+    private readonly InputAction m_Game_Select;
+    private readonly InputAction m_Game_Special01;
+    private readonly InputAction m_Game_Specia0l2;
+    private readonly InputAction m_Game_Special03;
+    private readonly InputAction m_Game_Special04;
+    public struct GameActions
     {
         private @PlayerControls m_Wrapper;
-        public VehicleActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @PrimaryAbility => m_Wrapper.m_Vehicle_PrimaryAbility;
-        public InputAction @SecondaryAbility => m_Wrapper.m_Vehicle_SecondaryAbility;
-        public InputAction @Move => m_Wrapper.m_Vehicle_Move;
-        public InputAction @Look => m_Wrapper.m_Vehicle_Look;
-        public InputActionMap Get() { return m_Wrapper.m_Vehicle; }
+        public GameActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Button01 => m_Wrapper.m_Game_Button01;
+        public InputAction @Button02 => m_Wrapper.m_Game_Button02;
+        public InputAction @Button03 => m_Wrapper.m_Game_Button03;
+        public InputAction @Button04 => m_Wrapper.m_Game_Button04;
+        public InputAction @Move => m_Wrapper.m_Game_Move;
+        public InputAction @Look => m_Wrapper.m_Game_Look;
+        public InputAction @Start => m_Wrapper.m_Game_Start;
+        public InputAction @Select => m_Wrapper.m_Game_Select;
+        public InputAction @Special01 => m_Wrapper.m_Game_Special01;
+        public InputAction @Specia0l2 => m_Wrapper.m_Game_Specia0l2;
+        public InputAction @Special03 => m_Wrapper.m_Game_Special03;
+        public InputAction @Special04 => m_Wrapper.m_Game_Special04;
+        public InputActionMap Get() { return m_Wrapper.m_Game; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(VehicleActions set) { return set.Get(); }
-        public void SetCallbacks(IVehicleActions instance)
+        public static implicit operator InputActionMap(GameActions set) { return set.Get(); }
+        public void SetCallbacks(IGameActions instance)
         {
-            if (m_Wrapper.m_VehicleActionsCallbackInterface != null)
+            if (m_Wrapper.m_GameActionsCallbackInterface != null)
             {
-                @PrimaryAbility.started -= m_Wrapper.m_VehicleActionsCallbackInterface.OnPrimaryAbility;
-                @PrimaryAbility.performed -= m_Wrapper.m_VehicleActionsCallbackInterface.OnPrimaryAbility;
-                @PrimaryAbility.canceled -= m_Wrapper.m_VehicleActionsCallbackInterface.OnPrimaryAbility;
-                @SecondaryAbility.started -= m_Wrapper.m_VehicleActionsCallbackInterface.OnSecondaryAbility;
-                @SecondaryAbility.performed -= m_Wrapper.m_VehicleActionsCallbackInterface.OnSecondaryAbility;
-                @SecondaryAbility.canceled -= m_Wrapper.m_VehicleActionsCallbackInterface.OnSecondaryAbility;
-                @Move.started -= m_Wrapper.m_VehicleActionsCallbackInterface.OnMove;
-                @Move.performed -= m_Wrapper.m_VehicleActionsCallbackInterface.OnMove;
-                @Move.canceled -= m_Wrapper.m_VehicleActionsCallbackInterface.OnMove;
-                @Look.started -= m_Wrapper.m_VehicleActionsCallbackInterface.OnLook;
-                @Look.performed -= m_Wrapper.m_VehicleActionsCallbackInterface.OnLook;
-                @Look.canceled -= m_Wrapper.m_VehicleActionsCallbackInterface.OnLook;
+                @Button01.started -= m_Wrapper.m_GameActionsCallbackInterface.OnButton01;
+                @Button01.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnButton01;
+                @Button01.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnButton01;
+                @Button02.started -= m_Wrapper.m_GameActionsCallbackInterface.OnButton02;
+                @Button02.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnButton02;
+                @Button02.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnButton02;
+                @Button03.started -= m_Wrapper.m_GameActionsCallbackInterface.OnButton03;
+                @Button03.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnButton03;
+                @Button03.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnButton03;
+                @Button04.started -= m_Wrapper.m_GameActionsCallbackInterface.OnButton04;
+                @Button04.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnButton04;
+                @Button04.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnButton04;
+                @Move.started -= m_Wrapper.m_GameActionsCallbackInterface.OnMove;
+                @Move.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnMove;
+                @Move.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnMove;
+                @Look.started -= m_Wrapper.m_GameActionsCallbackInterface.OnLook;
+                @Look.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnLook;
+                @Look.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnLook;
+                @Start.started -= m_Wrapper.m_GameActionsCallbackInterface.OnStart;
+                @Start.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnStart;
+                @Start.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnStart;
+                @Select.started -= m_Wrapper.m_GameActionsCallbackInterface.OnSelect;
+                @Select.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnSelect;
+                @Select.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnSelect;
+                @Special01.started -= m_Wrapper.m_GameActionsCallbackInterface.OnSpecial01;
+                @Special01.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnSpecial01;
+                @Special01.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnSpecial01;
+                @Specia0l2.started -= m_Wrapper.m_GameActionsCallbackInterface.OnSpecia0l2;
+                @Specia0l2.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnSpecia0l2;
+                @Specia0l2.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnSpecia0l2;
+                @Special03.started -= m_Wrapper.m_GameActionsCallbackInterface.OnSpecial03;
+                @Special03.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnSpecial03;
+                @Special03.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnSpecial03;
+                @Special04.started -= m_Wrapper.m_GameActionsCallbackInterface.OnSpecial04;
+                @Special04.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnSpecial04;
+                @Special04.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnSpecial04;
             }
-            m_Wrapper.m_VehicleActionsCallbackInterface = instance;
+            m_Wrapper.m_GameActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @PrimaryAbility.started += instance.OnPrimaryAbility;
-                @PrimaryAbility.performed += instance.OnPrimaryAbility;
-                @PrimaryAbility.canceled += instance.OnPrimaryAbility;
-                @SecondaryAbility.started += instance.OnSecondaryAbility;
-                @SecondaryAbility.performed += instance.OnSecondaryAbility;
-                @SecondaryAbility.canceled += instance.OnSecondaryAbility;
+                @Button01.started += instance.OnButton01;
+                @Button01.performed += instance.OnButton01;
+                @Button01.canceled += instance.OnButton01;
+                @Button02.started += instance.OnButton02;
+                @Button02.performed += instance.OnButton02;
+                @Button02.canceled += instance.OnButton02;
+                @Button03.started += instance.OnButton03;
+                @Button03.performed += instance.OnButton03;
+                @Button03.canceled += instance.OnButton03;
+                @Button04.started += instance.OnButton04;
+                @Button04.performed += instance.OnButton04;
+                @Button04.canceled += instance.OnButton04;
                 @Move.started += instance.OnMove;
                 @Move.performed += instance.OnMove;
                 @Move.canceled += instance.OnMove;
                 @Look.started += instance.OnLook;
                 @Look.performed += instance.OnLook;
                 @Look.canceled += instance.OnLook;
+                @Start.started += instance.OnStart;
+                @Start.performed += instance.OnStart;
+                @Start.canceled += instance.OnStart;
+                @Select.started += instance.OnSelect;
+                @Select.performed += instance.OnSelect;
+                @Select.canceled += instance.OnSelect;
+                @Special01.started += instance.OnSpecial01;
+                @Special01.performed += instance.OnSpecial01;
+                @Special01.canceled += instance.OnSpecial01;
+                @Specia0l2.started += instance.OnSpecia0l2;
+                @Specia0l2.performed += instance.OnSpecia0l2;
+                @Specia0l2.canceled += instance.OnSpecia0l2;
+                @Special03.started += instance.OnSpecial03;
+                @Special03.performed += instance.OnSpecial03;
+                @Special03.canceled += instance.OnSpecial03;
+                @Special04.started += instance.OnSpecial04;
+                @Special04.performed += instance.OnSpecial04;
+                @Special04.canceled += instance.OnSpecial04;
             }
         }
     }
-    public VehicleActions @Vehicle => new VehicleActions(this);
+    public GameActions @Game => new GameActions(this);
 
     // Menu
     private readonly InputActionMap m_Menu;
@@ -645,12 +869,20 @@ public class @PlayerControls : IInputActionCollection, IDisposable
             return asset.controlSchemes[m_ControllerSchemeIndex];
         }
     }
-    public interface IVehicleActions
+    public interface IGameActions
     {
-        void OnPrimaryAbility(InputAction.CallbackContext context);
-        void OnSecondaryAbility(InputAction.CallbackContext context);
+        void OnButton01(InputAction.CallbackContext context);
+        void OnButton02(InputAction.CallbackContext context);
+        void OnButton03(InputAction.CallbackContext context);
+        void OnButton04(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
+        void OnStart(InputAction.CallbackContext context);
+        void OnSelect(InputAction.CallbackContext context);
+        void OnSpecial01(InputAction.CallbackContext context);
+        void OnSpecia0l2(InputAction.CallbackContext context);
+        void OnSpecial03(InputAction.CallbackContext context);
+        void OnSpecial04(InputAction.CallbackContext context);
     }
     public interface IMenuActions
     {
